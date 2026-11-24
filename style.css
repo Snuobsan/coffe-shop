@@ -1,0 +1,570 @@
+ * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        body {
+            z-index: 1;
+        }
+
+        /* HEADER */
+        .head {
+            background-color: rgb(31, 30, 30);
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            padding: 30px 20px;
+        }
+
+        .head h1,
+        .head a,
+        .head {
+            color: white;
+            font-family: "Arial Black", Arial, sans-serif;
+            font-weight: 900;
+            letter-spacing: -1.5px;
+        }
+
+        .logo {
+            margin: 0;
+            width: 70%;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+        }
+
+        .hov:hover,
+        .fa-solid:hover {
+            color: orange;
+        }
+
+
+        /* BANNER */
+        .banner {
+            position: relative;
+            width: 100%;
+            height: 580px;
+            overflow: hidden;
+        }
+
+        .banimg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        .banabv {
+            position: absolute;
+            top: 50%;
+            left: 18%;
+            transform: translateY(-50%);
+            width: 65%;
+            max-width: 650px;
+            color: white;
+            z-index: 2;
+        }
+
+
+        /* CAROUSEL */
+        #myCarousel {
+            width: 100%;
+        }
+
+        .carousel-item {
+            min-height: 280px;
+        }
+
+        .banabv h2 {
+            font-size: 62px;
+            font-weight: 400;
+            color: #222;
+            margin-bottom: 5px;
+        }
+
+        .banabv h1 {
+            font-size: 68px;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 8px;
+        }
+
+        .banabv p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: white;
+            max-width: 550px;
+        }
+
+        .learnbtn,
+        button {
+            background-color: #222;
+            color: white;
+            border: none;
+            padding: 10px 23px;
+            font-size: 22px;
+            margin-top: 5px;
+            cursor: pointer;
+        }
+
+        .learnbtn:hover {
+            background-color: #f76d37;
+        }
+
+
+        /* SLIDER BUTTONS */
+        .slider-buttons {
+            position: absolute;
+            bottom: 0;
+            left: 75%;
+            display: flex;
+            gap: 8px;
+        }
+
+        .slider-buttons button {
+            background: white;
+            color: black;
+            border: none;
+            width: 40px;
+            height: 40px;
+            font-size: 25px;
+            line-height: 20px;
+            cursor: pointer;
+        }
+
+        .slider-buttons button:hover {
+            background: #f76d37;
+            color: white;
+        }
+
+
+        /* ABOUT US */
+        .aabt {
+            display: flex;
+            align-items: center;
+            width: 80%;
+            margin: 25px auto;
+            background-color: white;
+        }
+
+        .abttext {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 9%;
+        }
+
+        .abt {
+            color: darkorange;
+            font-weight: bold;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin: 0 0 10px;
+        }
+
+        .abttext p {
+            margin: 0 0 10px;
+            line-height: 1.5;
+        }
+
+        .abttext button {
+            display: block;
+            width: fit-content;
+            padding: 5px 15px;
+            cursor: pointer;
+        }
+
+        .boxabt {
+            display: block;
+            width: 60%;
+            max-width: 800px;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            padding-top: 30px;
+        }
+
+
+        /* GALLERY */
+        .gallery {
+            padding: 20px 10%;
+        }
+
+        .ghead {
+            text-align: center;
+            font-weight: bold;
+            color: darkorange;
+            font-size: 50px;
+            padding-bottom: 30px;
+        }
+
+        .gimg {
+            display: grid;
+            grid-template-columns: repeat(3, 400px);
+            grid-template-rows: repeat(3, 400px);
+            gap: 10px 10px;
+            justify-content: center;
+        }
+
+        .gimg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* (merged the two duplicate .gp rules) */
+        .gp {
+            justify-content: center;
+            padding-left: 150px;
+            text-align: center;
+            padding-bottom: 30px;
+        }
+
+
+        /* GALLERY IMAGE */
+        .imgop {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .imgop img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.3s;
+        }
+
+
+        /* SEARCH ICON */
+        .imgop i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 60px;
+            opacity: 0;
+            z-index: 2;
+            transition: 0.3s;
+        }
+
+        .imgop:hover img {
+            opacity: 0.5;
+        }
+
+        .imgop:hover i {
+            opacity: 1;
+            color: black;
+        }
+
+
+        /* GALLERY BUTTON */
+        .gbutton {
+            grid-column: 1 / 4;
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+            padding-bottom: 90px;
+            padding-top: 40px;
+        }
+
+        button:hover {
+            color: white;
+            background-color: darkorange;
+        }
+
+
+        /* SERVICES */
+        .services {
+            background-image: url("assets/services-bg.png");
+            background-repeat: repeat;
+            background-attachment: fixed;
+            width: 100%;
+            min-height: 600px;
+            margin: 0;
+            padding: 55px 20px 90px; /* bottom padding replaces the old "aaaaaaa" spacer */
+            text-align: center;
+        }
+
+        .services h2 {
+            color: white;
+        }
+
+        .services>p {
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .servcard {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 320px));
+            justify-content: center;
+            gap: 30px;
+            width: 100%;
+            margin: 0 auto;
+            align-items: start;
+        }
+
+        .serv {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            background-color: #f76d37;
+            width: 100%;
+            height: 240px;
+            padding: 20px;
+            gap: 12px;
+            transition: height 0.3s ease, background-color 0.3s ease;
+        }
+
+        .serv:hover {
+            height: 320px;
+            background-color: white;
+            color: black;
+        }
+
+        .serv h2,
+        .serv p {
+            width: 100%;
+            text-align: center;
+            margin: 0;
+        }
+
+        .serv:hover h2 {
+            color: black;
+        }
+
+        .servb {
+            font-weight: bold;
+            font-size: 50px;
+        }
+
+        .hid {
+            display: none;
+        }
+
+        .serv:hover .hid {
+            display: block;
+        }
+
+
+        /* TESTIMONIAL */
+        .tst {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 70px 20px 0;
+            font-family: "Poppins", sans-serif;
+            color: #333;
+        }
+
+        .tst h2 {
+            color: #f76d37;
+            font-weight: 700;
+            font-size: 42px;
+            margin: 0;
+        }
+
+        .tst-intro {
+            margin: 22px 0 0;
+            font-size: 16px;
+        }
+
+        .tst-slider {
+            margin-top: 70px;
+        }
+
+        .tst-slide {
+            position: relative;
+            min-height: 150px;
+            padding: 40px 40px 20px;
+            border-left: 3px solid #222;
+            border-right: 3px solid #222;
+        }
+
+        .tst-slide::before,
+        .tst-slide::after {
+            content: "";
+            position: absolute;
+            height: 3px;
+            width: 100px;
+            background: #222;
+        }
+
+        .tst-slide::before {
+            top: 0;
+            left: -3px;
+        }
+
+        .tst-slide::after {
+            bottom: 0;
+            right: -3px;
+        }
+
+        .tst-author {
+            position: absolute;
+            top: -18px;
+            left: 140px;
+            background: #fff;
+            padding: 0 10px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            color: #f76d37;
+            font-weight: 700;
+            font-size: 22px;
+            text-transform: uppercase;
+        }
+
+        .tst-quote {
+            font-size: 54px;
+            line-height: 0.6;
+            font-family: Georgia, serif;
+            margin-top: 18px;
+        }
+
+        .tst-slide p {
+            font-size: 16.5px;
+            line-height: 1.5;
+            padding-bottom: 20px;
+            margin: 0;
+        }
+
+        .tst-dots {
+            display: flex;
+            justify-content: center;
+            gap: 6px;
+            margin-top: 90px;
+        }
+
+        .tst-dots span {
+            width: 55px;
+            height: 18px;
+            border-radius: 20px;
+            background: #222;
+        }
+
+        .tst-dots span.active {
+            background: #f76d37;
+        }
+
+
+        /* CONTACT */
+        .cnt-title {
+            text-align: center;
+            color: #f76d37;
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            font-size: 42px;
+            margin: 90px 0 100px;
+        }
+
+        .cnt {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 520px;
+        }
+
+        .cnt-form-wrap {
+            background:
+                linear-gradient(rgba(35, 20, 15, 0.75), rgba(35, 20, 15, 0.75)),
+                url("assets/contact-bg.png") center / cover no-repeat,
+                #3b2a22;
+            display: flex;
+            align-items: center;
+            padding: 40px 58px;
+        }
+
+        .cnt form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .cnt input,
+        .cnt textarea {
+            width: 100%;
+            border: none;
+            outline: none;
+            background: #fff;
+            border-radius: 40px;
+            padding: 16px 40px;
+            font-family: "Poppins", sans-serif;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .cnt textarea {
+            border-radius: 28px;
+            resize: vertical;
+            min-height: 110px;
+        }
+
+        .cnt input::placeholder,
+        .cnt textarea::placeholder {
+            color: #777;
+        }
+
+        .cnt input:focus,
+        .cnt textarea:focus {
+            box-shadow: 0 0 0 3px #f76d37;
+        }
+
+        .cnt form button {
+            align-self: flex-start;
+            background: #f76d37;
+            color: #fff;
+            border-radius: 40px;
+            padding: 12px 44px;
+            font-family: "Poppins", sans-serif;
+            font-size: 17px;
+            font-weight: 600;
+        }
+
+        .cnt form button:hover {
+            background: #fff;
+            color: #f76d37;
+        }
+
+        .cnt-msg {
+            color: #fff;
+            font-family: "Poppins", sans-serif;
+            font-size: 15px;
+            min-height: 20px;
+        }
+
+        .cnt-map iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 520px;
+            border: 0;
+            display: block;
+        }
+        footer{
+            padding-left:35%;
+            display:flex;
+            gap:50px;
+            background-color:black;
+            color: white;
+            justify-content: center;
+            align-content:center;
+        }
